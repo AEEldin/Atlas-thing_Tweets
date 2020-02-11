@@ -11,14 +11,14 @@
 			background-color:#eeeeee;
 			color:black;
 			text-align:center;
-			padding:5px;	      
+			padding:5px;
 		}
 
 		#myDiv {
 			background-color:#eeeeee;
 			color:black;
 			text-align:center;
-			padding:5px;	      
+			padding:5px;
 		}
 
 		#footer {
@@ -26,7 +26,7 @@
 			color:white;
 			clear:both;
 			text-align:center;
-		    padding:5px;	 	 
+		    padding:5px;
 		}
 </style>
 
@@ -139,7 +139,7 @@ body {font-family: Arial;}
 
 <br><br>
 <form id="form1"></form>
-				
+
 <div class="tab">
 	<button class="tablinks" onclick="openTab(event, 'Tweet Type')">Tweet Type</button>
 	<button class="tablinks" onclick="openTab(event, 'Tx identification')">Sender Identification Attributes</button>
@@ -151,28 +151,30 @@ body {font-family: Arial;}
 
 
 <div id="Tweet Type" class="tabcontent">
-	
+
 	<br><br>
 	<h4><i><b>There are different Types of tweets a thing can broadcast (announce) in the smart space and captured by other things/App developers/Vendors/SmartSpace owners</b></i></h4>
 			&emsp; &emsp; Identification 					<i><font size="2"> - the Atlas thing ID attribute defined by the Smart Thing ID attribute under the "descriptive metadata" sub-section of IoT-DDL. </font></i> <br><br>
 			&emsp; &emsp; Service  							<i><font size="2"> - information about one service the thing can offer to the smart space according to the service description from the IoT-DDL. </font></i> <br><br>
 			&emsp; &emsp; Relationship 				 		<i><font size="2"> - information about one relationship the thing's service is related to another service (offered by another thing) or unbounded service (description to a future service). </font></i> <br><br>
-			
+			&emsp; &emsp; Actionable Keyword				<i><font size="2"> - information about potential input data/parameters for another thing's service. </font></i> <br><br>
+
 	<br>
 	<h4><i><b>There are different Types of tweets a thing/App developer/Vendor/Smartspace owner can unicast (direct) in the smart space</b></i></h4>
 			&emsp; &emsp; API Call 							<i><font size="2"> - call by the thing/Application Developer to trigger an API for an offered service by another entity of the smart space (e.g., smart thing). </font></i> <br><br>
 			&emsp; &emsp; API Call Result					<i><font size="2"> - result of the directed call to trigger an API for an offered service. </font></i> <br><br>
 			&emsp; &emsp; Device Management Command  		<i><font size="2"> - call by the User/vendor through the device management service/server to update/edit attributes of the uploaded thing IoT-DDL or reconfigure parts of the mounted architecture. </font></i> <br><br>
 			&emsp; &emsp; Device Management Command Result 	<i><font size="2"> - result of the directed call done by device management service/server. </font></i> <br><br>
+			&emsp; &emsp; Actionable Keyword Binding		<i><font size="2"> - a service has matched with the data from an Actionable Keyword and asks the original thing to use it. </font></i> <br><br>
 
 </div>
 
 
 <div id="Tx identification" class="tabcontent">
-	
+
 	<br><br>
 	<h4><i><b>The sender of the tweet (and its the smart space) by the App developer/Vendor/Owner/Atlas thing should be identified through the following attributes </b></i></h4>
-				
+
 			&emsp; &emsp; Sender ID * : 				<i><font size="2">the App developer Name/the vendor Name/the Atlas thing ID attribute defined by the Smart Thing ID attribute under the "descriptive metadata" sub-section of IoT-DDL. </font></i> <br><br>
 			&emsp; &emsp; Sender Name : 				<i><font size="2">the App developer Name/the vendor Name/the Atlas thing Name attribute defined by the Smart Thing Name attribute under the "descriptive metadata" sub-section of IoT-DDL. </font></i> <br><br>
 			&emsp; &emsp; Sender Smart Space ID * : 	<i><font size="2">the ID of the smart space defined by the Smart Space ID attribute under the "descriptive metadata" sub-section of IoT-DDL. </font></i> <br><br>
@@ -180,15 +182,15 @@ body {font-family: Arial;}
 
 	<h4><i><b><font size="2">* means required attributes, while the other attributes are optional to be considered. </font></b></i></h4>
 	<h4><i><b><font size="2">Regardless the type of the tweet, the tweet must hold the identification attributes of the sender smart thing. </font></b></i></h4>
-		
+
 </div>
 
 
 <div id="Rx identification" class="tabcontent">
-	
+
 	<br><br>
 	<h4><i><b>The Receiver of the tweet (and its the smart space) by the App developer/Vendor/Owner/Atlas thing should be identified through the following attributes </b></i></h4>
-				
+
 			&emsp; &emsp; Receiver ID * : 				<i><font size="2">the App developer Name/the vendor Name/the Atlas thing ID attribute defined by the Smart Thing ID attribute under the "descriptive metadata" sub-section of IoT-DDL. </font></i> <br><br>
 			&emsp; &emsp; Receiver Name : 				<i><font size="2">the App developer Name/the vendor Name/the Atlas thing Name attribute defined by the Smart Thing Name attribute under the "descriptive metadata" sub-section of IoT-DDL. </font></i> <br><br>
 			&emsp; &emsp; Receiver Smart Space ID * : 	<i><font size="2">the ID of the smart space defined by the Smart Space ID attribute under the "descriptive metadata" sub-section of IoT-DDL. </font></i> <br><br>
@@ -196,14 +198,14 @@ body {font-family: Arial;}
 
 	<h4><i><b><font size="2">* means required attributes, while the other attributes are optional to be considered. </font></b></i></h4>
 	<h4><i><b><font size="2">For only the tweet type (API call/Result and Device-Management commands/Result), the tweet must hold the identification attributes of the receiver smart thing. </font></b></i></h4>
-		
+
 </div>
 
 
 
 
 <div id="Payload" class="tabcontent">
-	
+
 	<br><br>
 	<h4><i><b>The attributes/parameters that describe the payload of the tweet differs w.r.t. the tweet type as follows</b></i></h4>
 			&emsp; Identification tweet                                 <br>
@@ -213,8 +215,8 @@ body {font-family: Arial;}
 			&emsp; &emsp; communication module                          <br>
 			&emsp; &emsp; communication protocol                        <br>
 			&emsp; &emsp; IP address                   	                <br>
-			
-		<br><br>	
+
+		<br><br>
 			&emsp; Service Announcement tweet                           <br>
 			&emsp; &emsp; Service Name                                  <br>
 			&emsp; &emsp; Service Type                               	<br>
@@ -231,9 +233,9 @@ body {font-family: Arial;}
 			&emsp; &emsp; Input Name                   	                <br>
 			&emsp; &emsp; Input Description                   	        <br>
 			&emsp; &emsp; Input Range                   	            <br>
-			
-		<br><br>	
-			
+
+		<br><br>
+
 			&emsp; Relationship Announcement tweet (between bounded services)                      <br>
 			&emsp; &emsp; Relationship Name                             <br>
 			&emsp; &emsp; Relationship Type                           	<br>
@@ -248,10 +250,10 @@ body {font-family: Arial;}
 			&emsp; &emsp; Second Service ID                   	        <br>
 			&emsp; &emsp; Second Service Space ID              	        <br>
 			&emsp; &emsp; Second Service Type                            <br>
-			
+
 		<br><br>
-		
-		
+
+
 			&emsp; Relationship Announcement tweet (between bounded and unbounded service)                      <br>
 			&emsp; &emsp; Relationship Name                             <br>
 			&emsp; &emsp; Relationship Type                           	<br>
@@ -268,10 +270,10 @@ body {font-family: Arial;}
 			&emsp; &emsp; Ubounded Service Type                         <br>
 			&emsp; &emsp; Ubounded Service Keywords                     <br>
 			&emsp; &emsp; Ubounded Service Match                        <br>
-			
+
 		<br><br>
-		
-		
+
+
 			&emsp; Relationship Announcement tweet (between unbounded and bounded service)                      <br>
 			&emsp; &emsp; Relationship Name                             <br>
 			&emsp; &emsp; Relationship Type                           	<br>
@@ -288,9 +290,19 @@ body {font-family: Arial;}
 			&emsp; &emsp; Second Service ID                   	        <br>
 			&emsp; &emsp; Second Service Space ID              	        <br>
 			&emsp; &emsp; Second Service Type                           <br>
-			
+
 		<br><br>
-			
+
+
+			&emsp; Actionable Keyword (AKW) Announcement tweet 			<br>
+			&emsp; &emsp; AKW Name										<br>
+			&emsp; &emsp; Input Name									<br>
+			&emsp; &emsp; Input Type									<br>
+			&emsp; &emsp; Input Description								<br>
+			&emsp; &emsp; Descriptive Keywords							<br>
+
+		<br><br>
+
 </div>
 
 
@@ -300,11 +312,11 @@ body {font-family: Arial;}
 
 
 <div id="Examples" class="tabcontent">
-	
+
 	<br><br>
 	<i><b>JSON-formatted example for an Identification tweet announced by a smart lamp thing to the smart space
-			
-		<i><font size="2"> 	
+
+		<i><font size="2">
 			<br>
 			<br>
 			&emsp; &emsp; {																	<br>
@@ -324,16 +336,16 @@ body {font-family: Arial;}
 			   &emsp; &emsp; &emsp; "Tweet TimeStamp": "9/2/19 - 06:09PM"					<br>
 			&emsp; &emsp; }																	<br>
 			<br>
-			
-		</font></i> 
-			
+
+		</font></i>
+
 	</b></i>
-	
-	
+
+
 	<br><br><br>
 	<i><b>JSON-formatted example for a service announced by the smart lamp thing to the smart space
-			
-		<i><font size="2"> 	
+
+		<i><font size="2">
 			<br>
 			<br>
 			&emsp; &emsp; {																	<br>
@@ -354,13 +366,37 @@ body {font-family: Arial;}
 			   &emsp; &emsp; &emsp; "Tweet TimeStamp": "9/2/19 - 06:09PM"					<br>
 			&emsp; &emsp; }																	<br>
 			<br>
-			
-		</font></i> 
-			
+
+		</font></i>
+
 	</b></i>
-			
-			
-			
+
+
+	<br><br><br>
+	<i><b>JSON-formatted example for an Actionable Keyword announced by the smart lamp thing to the smart space
+
+		<i><font size="2">
+			<br><br>
+			&emsp; &emsp; {																	<br>
+				&emsp; &emsp; &emsp; "Tweet Type": "Actionable Keyword",					<br>
+																							<br>
+				&emsp; &emsp; &emsp; "Sender ID": "AtlasThing475",							<br>
+				&emsp; &emsp; &emsp; "Sender Smart Space ID": "Atlas_SmartSpace3260127",	<br>
+																							<br>
+				&emsp; &emsp; &emsp; "AKW Name": "Lamp State",								<br>
+				&emsp; &emsp; &emsp; "Input Name": "IsOn",									<br>
+				&emsp; &emsp; &emsp; "Input Type": "Boolean",								<br>
+				&emsp; &emsp; &emsp; "Input Description": "A value representing whether the light is currently on", <br>
+				&emsp; &emsp; &emsp; "Keywords": "lamp, light, status, on"					<br>
+																							<br>
+				&emsp; &emsp; &emsp; "Tweet TimeStamp": "9/2/19 - 06:09PM"					<br>
+			&emsp; &emsp;}
+			<br>
+
+		</font></i>
+
+	</b></i>
+
 </div>
 
 
@@ -377,8 +413,8 @@ body {font-family: Arial;}
 <div style="text-align: center;">
 <div id="gab"></div>
 
-<p align="center" style="font-family:Comic Sans MS"><b>  <font size="3" color="MidnightBlue">This is part of Atlas thing Ecosystem project [Read more about it]</p> 
-	
+<p align="center" style="font-family:Comic Sans MS"><b>  <font size="3" color="MidnightBlue">This is part of Atlas thing Ecosystem project [Read more about it]</p>
+
 </br>
 </br>
 
@@ -399,6 +435,6 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 </script>
-     
+
 </body>
-</html> 
+</html>
